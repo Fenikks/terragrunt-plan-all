@@ -50,7 +50,7 @@ outputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:c607d69c867dfed45544668e139de69c89235c4861bb410f4960f5503a736fb7
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:468a4f3d5488cc0e6edba8cc9429db0a4c08be867bce358b659f1ed6cf80710d
   entrypoint: /entrypoints/tg_plan_all.sh
 
 branding:
