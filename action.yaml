@@ -43,14 +43,14 @@ outputs:
     description: The number of resources that would be destroyed by this plan
   text_plan_path:
     description: Path to a file in the workspace containing the generated plan in human readable format.
-  json_plan_path:
-    description: Path to a file in the workspace containing the generated plan in JSON format.
+  # json_plan_path:
+  #   description: Path to a file in the workspace containing the generated plan in JSON format.
   run_id:
     description: If the root module uses the `remote` or `cloud` backend in remote execution mode, this output will be set to the remote run id.
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:686269813e2cbb28fb4bba3efe67bdf1c4d019947858dd1a7d734426d2958b30
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:66a4d29de245b68e5f137fe132f9fd85adba7f8e5626f449d6e9da1c65f616e9
   entrypoint: /entrypoints/tg_plan_all.sh
 
 branding:
