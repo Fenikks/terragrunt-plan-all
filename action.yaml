@@ -34,7 +34,7 @@ inputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:4a6e82d881290ac3c580009c06e566961a1591b98d937ca79ea9dee80da9ae3a
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:8e3cf0d817b9a2c0a9c9d9436810ffa42ab2d3c8dd459663b6c73c976b8e7238
   entrypoint: /entrypoints/tg_plan_all.sh
 
 branding:
