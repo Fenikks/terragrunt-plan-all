@@ -39,8 +39,12 @@ inputs:
     description: "Cache folder name"
     required: false
     default: ".terragrunt-cache"
+  use_tf_plugin_cache_folder:
+    description: "If set to true, the variable TF_PLUGIN_CACHE_DIR will be enabled"
+    required: false
+    default: "false"
   tf_plugin_cache_folder:
-    description: "Cache folder name for Terraform plugins"
+    description: "Cache folder name for Terraform plugins. Only applicable if use_tf_plugin_cache_folder is set to true"
     required: false
     default: "tf-plugin-cache"
   tg_cache_folder:
@@ -50,7 +54,7 @@ inputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:7637f28cbb5e9e8a4fd736e2050a1b4d6a7759800dce76dc47763545453125b0
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:a66831aef7350ae02641bfa013fb3445281b788c5fa2ed56feba4538c68fd57c
   entrypoint: /entrypoints/tg_plan_all.sh
 
 branding:
